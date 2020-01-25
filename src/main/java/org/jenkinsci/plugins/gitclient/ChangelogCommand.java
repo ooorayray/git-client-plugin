@@ -107,6 +107,13 @@ public interface ChangelogCommand extends GitCommand {
      * @return a {@link org.jenkinsci.plugins.gitclient.ChangelogCommand} object.
      */
     ChangelogCommand max(int n);
+    
+    /**
+     * Include merge commits in the changelog (default is not to)
+     * 
+     * @return a {@link org.jenkinsci.plugins.gitclient.ChangelogCommand} object. 
+     */
+    ChangelogCommand includeMergeCommits();
 
     /**
      * Abort this ChangelogCommand without executing it, close any

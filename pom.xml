@@ -11,13 +11,13 @@
 
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>git-client</artifactId>
-  <version>${revision}${changelist}</version>
+  <version>3.1.2-ooorayray-merge-commit</version>
   <packaging>hpi</packaging>
 
   <name>Jenkins Git client plugin</name>
   <description>Utility plugin for Git support in Jenkins</description>
   <!-- Use documentation from tagged release -->
-  <url>https://github.com/jenkinsci/${project.artifactId}-plugin/tree/${project.artifactId}-${revision}/README.adoc</url>
+  <url>https://github.com/ooorayray/${project.artifactId}-plugin/tree/${project.artifactId}-${revision}/README.adoc</url>
   <inceptionYear>2013</inceptionYear>
   <licenses>
     <license>
@@ -47,10 +47,10 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
-    <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
-    <tag>${scmTag}</tag>
+    <connection>scm:git:git://github.com/ooorayray/${project.artifactId}-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:ooorayray/${project.artifactId}-plugin.git</developerConnection>
+    <url>https://github.com/ooorayray/${project.artifactId}-plugin</url>
+    <tag>git-client-3.1.2-ooorayray-merge-commit</tag>
   </scm>
 
   <properties>

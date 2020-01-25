@@ -1149,6 +1149,7 @@ public class CliGitAPIImpl extends LegacyCompatibleGitAPIImpl {
 
             private Integer n = null;
             private Writer out = null;
+            boolean includeMergeCommits = true;
 
             @Override
             public ChangelogCommand excludes(String rev) {
@@ -1184,6 +1185,11 @@ public class CliGitAPIImpl extends LegacyCompatibleGitAPIImpl {
                 return this;
             }
 
+            public ChangelogCommand includeMergeCommits() {
+                this.includeMergeCommits = true;
+                return this;
+            }
+
             @Override
             public void abort() {
                 /* No cleanup needed to abort the CliGitAPIImpl ChangelogCommand */
@@ -1197,6 +1203,9 @@ public class CliGitAPIImpl extends LegacyCompatibleGitAPIImpl {
                 } else {
                     /* Ancient git versions don't support the required format string, use 'raw' and hope it works */
                     args.add("--format=raw");
+                }
+                if (includeMergeCommits) {
+                    args.add("-m");
                 }
                 if (n!=null)
                     args.add("-n").add(n);
